@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="EN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAIWIND</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.js">
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+        sm: '640px', // => @media (min-width: 640px) { ... }
+        md: '768px', // => @media (min-width: 768px) { ... }
+        lg: '1024px', // => @media (min-width: 1024px) { ... }
+        xl: '1280px', // => @media (min-width: 1280px) { ... }
+        xxl: '1536px', // => @media (min-width: 1536px) { ... }
+        },
+        spacing: {
+            '1': '8px',
+            '2': '12px',
+            '3': '16px',
+            '4': '24px',
+            '5': '32px',
+            '6': '48px',
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            view: '#eab308',
+            show: {
+                100: '#49e659',
+                932: '#434252'
+            }
+          }
+        }
+
+      }
+    }
+  </script>
+  
+</head>
+<body>
+  <!-- <h1 class="text-3xl font-bold underline"> -->
+  <h1 class="text-3xl font-bold underline bg-green-600 text-white border-8 border-show-932">
+    Hello world!
+  </h1>
+  <h1 class="text-xxl sm:text-base md:text-lg lg:text-xl font-bold underline text-green-600 border-8 border-view">
+    Hello world!
+  </h1>
+</body>
+<script src="main.js"></script>
+</html>
